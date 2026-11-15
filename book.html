@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an Appointment | PTx Physiotherapy</title>
+  <meta name="description" content="Book a physiotherapy assessment in Swindon or Malmesbury. 60-minute initial assessments, evening and weekend appointments, no GP referral needed.">
+  <meta name="theme-color" content="#111111">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SHARED HEADER (copy to every page) ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="PTx Physiotherapy home">
+        <img src="images/ptx-logo.jpg" alt="" width="42" height="46">
+        <span>PT<sup style="font-size:.55em">x</sup><small>HCPC-registered · CSP member</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="conditions.html">What We Treat</a>
+        <a href="services.html">Appointments &amp; Fees</a>
+        <a href="first-visit.html">Your First Visit</a>
+        <a class="btn btn-gold" href="book.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Book online</p>
+        <h1>Book your appointment</h1>
+        <p class="lede">Choose an appointment below, or use the finder if you’re not sure which to pick.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="finder">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Appointment finder</p><h2>Not sure what to book?</h2></div>
+        <div class="finder" data-finder>
+          <p class="q" id="q-who">1. Have you visited PTx Physiotherapy before?</p>
+          <div class="opts" role="group" aria-labelledby="q-who">
+            <button class="opt" data-q="who" data-v="new" aria-pressed="false">New patient</button>
+            <button class="opt" data-q="who" data-v="returning" aria-pressed="false">Returning patient</button>
+          </div>
+          <p class="q" id="q-goal">2. What is your main goal?</p>
+          <div class="opts" role="group" aria-labelledby="q-goal">
+            <button class="opt" data-q="goal" data-v="pain" aria-pressed="false">New injury or pain</button>
+            <button class="opt" data-q="goal" data-v="rehab" aria-pressed="false">Ongoing rehab</button>
+            <button class="opt" data-q="goal" data-v="active" aria-pressed="false">Recovery &amp; staying active</button>
+          </div>
+          <div data-finder-result aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <div class="container">
+        <ul class="badges"><li>No GP referral needed</li><li>HCPC-registered &amp; CSP member</li><li>Evening &amp; weekend appointments</li><li>Self-pay: not currently registered with private insurers</li></ul>
+
+        <!-- Cliniko embed: set CONFIG.clinikoUrl in script.js to show it (the request form below then hides) -->
+        <div id="cliniko-embed"></div>
+
+        <!-- Request form: used until online booking is connected -->
+        <div id="request-form">
+          <p class="micro">Not for emergencies: call NHS 111 or 999. Request an appointment below and I’ll confirm a time by email or phone.</p>
+          <form class="form" id="booking-form">
+            <label class="field">Full name<input id="f-name" required autocomplete="name"></label>
+            <label class="field">Date of birth<input id="f-dob" type="date" required autocomplete="bday"></label>
+            <label class="field">Address<input id="f-address" required autocomplete="street-address"></label>
+            <div class="field-row">
+              <label class="field">Postcode<input id="f-postcode" required autocomplete="postal-code"></label>
+              <label class="field">Telephone<input id="f-phone" type="tel" required autocomplete="tel"></label>
+            </div>
+            <label class="field">Email<input id="f-email" type="email" required autocomplete="email"></label>
+            <label class="field">Appointment
+              <select id="f-type"><option>Initial assessment (60 min)</option><option>Follow-up session (45 min)</option><option>Not sure yet</option></select>
+            </label>
+            <label class="field">When suits you? (evenings and weekends)<input id="f-times"></label>
+            <label class="field">What’s the problem? (brief description)<textarea id="f-issue" required></textarea></label>
+            <label class="consent"><input type="checkbox" id="f-consent" required><span>I agree to PTx using these details, including health information I’ve given, to arrange my appointment. Details are sent by email, which isn’t fully secure, so please keep the description brief.</span></label>
+            <button class="btn btn-gold" type="submit">Request appointment</button>
+          </form>
+
+        </div>
+
+        <details class="privacy">
+          <summary>Privacy notice</summary>
+          <p><strong>Who I am:</strong> PTx Physiotherapy (Joe, sole practitioner), joe@ptxphysio.co.uk.</p>
+          <p><strong>What I collect:</strong> the details you enter when you book.</p>
+          <p><strong>Why:</strong> to arrange and deliver your appointment and, if you become a patient, to keep your clinical record. Health information is special category data, which I use with your explicit consent and to provide healthcare.</p>
+          <p><strong>Who sees it:</strong> only me. Online bookings and clinical records are held in Cliniko, the practice-management software I use, which processes them on my behalf. I don’t sell or share your details, except where the law requires it or to protect your safety.</p>
+          <p><strong>How long:</strong> clinical records are kept securely for as long as professional guidance requires. Enquiries that don’t lead to an appointment are deleted when no longer needed.</p>
+          <p><strong>Your rights:</strong> you can ask to see, correct or delete your information, or complain to the Information Commissioner’s Office (ico.org.uk).</p>
+        </details>
+
+        <div class="notice">Prefer to book another way? Email <a href="mailto:joe@ptxphysio.co.uk"><strong>joe@ptxphysio.co.uk</strong></a>. PTx is not currently registered with any private medical insurers, so appointments are self-pay. If you plan to claim through your insurer, check with them before booking.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== SHARED FOOTER (copy to every page) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>PTx Physiotherapy</h3>
+          <p>HCPC-registered · CSP member<br>Swindon &amp; Malmesbury</p>
+          <p>Self-pay clinic: not currently registered with private medical insurers.</p>
+          <p>Not for emergencies: call NHS 111 or 999.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <a href="conditions.html">What We Treat</a>
+          <a href="services.html">Appointments &amp; Fees</a>
+          <a href="first-visit.html">Your First Visit</a>
+          <a href="book.html">Book Now</a>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <a href="mailto:joe@ptxphysio.co.uk">joe@ptxphysio.co.uk</a>
+          <a href="https://www.instagram.com/joe.thephysio/" rel="noopener">@joe.thephysio</a>
+        </div>
+      </div>
+      <p class="legal">© <span id="year">2026</span> PTx Physiotherapy. Evening and weekend appointments.</p>
+    </div>
+  </footer>
+
+  <!-- ===== STICKY MOBILE BAR (shows on phones only) ===== -->
+  <div class="mobile-bar">
+    <a class="btn btn-gold" href="book.html">Book Online</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
