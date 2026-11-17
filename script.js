@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PTx Physiotherapy: shared JavaScript (no libraries needed)
+   PTˣ Physiotherapy: shared JavaScript (no libraries needed)
    1 Config · 2 Mobile navigation · 3 FAQ accordions · 4 Condition filters
    5 Appointment finder · 6 Footer year
    ========================================================================== */
@@ -123,7 +123,7 @@
   if (embed && CONFIG.clinikoUrl) {
     var frame = document.createElement('iframe');
     frame.id = 'cliniko-booking-frame';
-    frame.title = 'Book online with PTx Physiotherapy';
+    frame.title = 'Book online with PTˣ Physiotherapy';
     frame.src = CONFIG.clinikoUrl;
     frame.setAttribute('scrolling', 'auto');
     frame.setAttribute('allow', 'payment');
@@ -157,10 +157,10 @@
         'Appointment: ' + v('f-type'),
         'Preferred times: ' + (v('f-times') || 'Not specified'), '',
         'Problem: ' + v('f-issue'), '',
-        'Consent given for PTx to use these details to arrange my appointment: Yes'
+        'Consent given for PTˣ to use these details to arrange my appointment: Yes'
       ].join('\n');
       location.href = 'mailto:' + CONFIG.email +
-        '?subject=' + encodeURIComponent('PTx booking request from ' + v('f-name')) +
+        '?subject=' + encodeURIComponent('PTˣ booking request from ' + v('f-name')) +
         '&body=' + encodeURIComponent(body);
     });
   }

@@ -67,7 +67,8 @@ img { max-width: 100%; height: auto; }
 /* 5. HEADER & NAVIGATION ------------------------------------------------ */
 .site-header { position: sticky; top: 0; z-index: 50; background: var(--black); color: var(--white); border-bottom: 2px solid var(--gold); }
 .header-inner { max-width: 1120px; margin: 0 auto; padding: 0 6vw; min-height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 600 22px var(--font-head); }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font: 600 18px/1.2 var(--font-body); }
+sup { font-size: 0.6em; line-height: 0; }
 .logo img { height: 46px; width: auto; border-radius: 8px; }
 .logo small { display: block; font: 500 11px var(--font-body); letter-spacing: 1px; color: var(--gold); }
 .nav { display: none; align-items: center; gap: 24px; font-size: 15px; }
